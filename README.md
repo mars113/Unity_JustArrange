@@ -6,5 +6,5 @@ v0.2.2(beta)</br>
 <b>Instroduction</b></br>
 An unity tool for arranging gameobjects.</br></br>
 
-<b>USAGE</b> 
+<b>USAGE</b></br> 
 https://youtu.be/Av5J0lR7618</br>
