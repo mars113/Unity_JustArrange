@@ -80,10 +80,7 @@ namespace MarsCode
 
             serializedObject.Update();
 
-            if(!DrawBasicHandlers())
-            {
-                return;
-            }
+            DrawBasicHandlers();
 
             DrawAdvencedHandlers();
 
@@ -136,7 +133,7 @@ namespace MarsCode
         /// <summary>
         /// 繪製基本控制項
         /// </summary>
-        bool DrawBasicHandlers()
+        void DrawBasicHandlers()
         {
             GUI.color = colors[0];
             EditorGUILayout.BeginHorizontal("Box");
@@ -153,15 +150,6 @@ namespace MarsCode
                 }
             }
             EditorGUILayout.EndHorizontal();
-
-            if(obj.go == null)
-            {
-                var fontSize = EditorStyles.helpBox.fontSize;
-                EditorStyles.helpBox.fontSize = 14;
-                EditorGUILayout.HelpBox("指派Source物件以進行操作", MessageType.Info);
-                EditorStyles.helpBox.fontSize = fontSize;
-                return false;
-            }
 
             GUI.color = colors[1];
             EditorGUILayout.BeginVertical("Box");
@@ -213,8 +201,6 @@ namespace MarsCode
                 EditorGUILayout.EndHorizontal();
             }
             EditorGUILayout.EndVertical();
-
-            return true;
         }
 
 
